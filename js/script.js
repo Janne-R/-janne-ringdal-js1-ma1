@@ -39,7 +39,10 @@ for (let i = 0; i < paragraphs.length; i++) {
 }
 
 //question 6
-const resultsContainer = document.querySelector(".result");
+const resultsContainer = document.querySelector(".results");
+resultsContainer.innerHTML = "<p>New paragraph</p>";
+resultsContainer.style.backgroundColor = "yellow";
 
 //question 7
+
 //question 8
