@@ -1,22 +1,22 @@
 const cats = [
-    {
-        name: "Blob",
-        age: 10
-    },
-    {
-        name: "Harold",
-    },
-    {
-        name: "Blurt",
-        age: 21
-    }
+  {
+    name: "Blob",
+    age: 10
+  },
+  {
+    name: "Harold",
+  },
+  {
+    name: "Blurt",
+    age: 21
+  }
 ];
 
 //question 1
 const cat = {
-    complain: function() {
-        console.log("Meow!");
-    }
+  complain: function () {
+    console.log("Meow!");
+  }
 };
 
 cat.complain();
@@ -35,7 +35,7 @@ heading.classList.add("subheading");
 const paragraphs = document.querySelectorAll("p");
 
 for (let i = 0; i < paragraphs.length; i++) {
-    paragraphs[i].style.color ="red";
+  paragraphs[i].style.color = "red";
 }
 
 //question 6
@@ -44,40 +44,38 @@ resultsContainer.innerHTML = "<p>New paragraph</p>";
 resultsContainer.style.backgroundColor = "yellow";
 
 //question 7
-function listName(list) {
-    for (let i = 0; i < list.length; i++) {
+function listNames(list) {
+  for (let i = 0; i < list.length; i++) {
     console.log(list[i].name);
-    }
+  }
 }
 
-listName(cats);
+listNames(cats);
 
 //question 8
 function createCats(cats) {
-    
-  let catHTML = "";
+  let catsHTML = "";
 
-    for (let i = 0; i < cats.length; i++) {
+  for (let i = 0; i < cats.length; i++) {
+    let ageProperty = "Age unknown";
 
-        let ageProperty = "Age unknow";
-
-        if(cats[i].age) {
-            ageProperty = cats[i].age;
-        }
-
-        catBox = `
-            <div>
-                <h5>${cats[i].name}</h5>
-                <p>${ageProperty}</p>
-        `
-        catHTML = catHTML + catBox;
+    if (cats[i].age) {
+      ageProperty = cats[i].age;
     }
-    
 
-    return catHTML;
+    const catBox = `
+      <div>
+        <h5>${cats[i].name}</h5>
+        <p>${ageProperty}</p>
+      </div>
+      `;
+    catsHTML = catsHTML + catBox;
+  }
+
+  return catsHTML;
 }
 
-const newHTML = createCats(cats);
+const catsHTML = createCats(cats);
 
 const container = document.querySelector(".cat-container");
-container.innerHTML = newHTML;
+container.innerHTML = catsHTML;
