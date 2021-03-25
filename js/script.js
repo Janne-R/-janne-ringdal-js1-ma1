@@ -44,5 +44,12 @@ resultsContainer.innerHTML = "<p>New paragraph</p>";
 resultsContainer.style.backgroundColor = "yellow";
 
 //question 7
+function listName(list) {
+    for (let i = 0; i < list.length; i++) {
+    console.log(list[i].name);
+    }
+}
+
+listName(cats);
 
 //question 8
